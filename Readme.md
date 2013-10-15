@@ -26,8 +26,8 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `date` | Date | Date | Yes | None | Future dates
-`startTime` | Date | Start Time | Yes | None | Future dates
-`endTime` | Date | End Time | Yes | None | Future dates
+`start_time` | Date | Start Time | Yes | None | Future dates
+`end_time` | Date | End Time | Yes | None | Future dates
 `repeat` | String | Repeat | No | `once` | `once`, `weekly`, `daily`
 `title` | String | Title | No | None | 40 characters
 `desc` | String | Description | No | None | 140 characters
