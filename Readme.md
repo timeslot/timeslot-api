@@ -32,7 +32,7 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 `title` | String | Title | No | None | 40 characters
 `desc` | String | Description | No | None | 140 characters
 `format` | String | Format | No | `in-person` | `in-person`, `skype`, `google-hangout`, `phone`
-`cost` | String | Cost | No | Any USD value >= $1.00 in cents, e.g. `100` = $1.00.
+`cost` | String | Cost | No | `0` | Any USD value >= $1.00 in cents, e.g. `100` = $1.00.
 `created` | Date | Created | No | Auto | N/A
 `updated` | Date | Updated | No | Auto | N/A
 
