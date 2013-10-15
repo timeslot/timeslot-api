@@ -28,6 +28,7 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 `date` | Date | Date | Yes | None | Future dates
 `start_time` | Date | Start Time | Yes | None | Future dates
 `end_time` | Date | End Time | Yes | None | Future dates
+`duration` | Integer | Duration | Yes | None | Any integer in minutes >= 15
 `repeat` | String | Repeat | No | `once` | `once`, `weekly`, `daily`
 `title` | String | Title | No | None | 40 characters
 `desc` | String | Description | No | None | 140 characters
@@ -42,6 +43,10 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `email` | Email | Email | Yes | None | Any valid email address
+`name` | String | Name | No | None | 20 characters
+`surname` | String | Surname | No | None | 20 characters
+`start_time` | Date | Start time | Yes | None | Any valid time between `start_time` plus the `duration` of `schedule_id` OR any valid time between `start_time` and `end_time` that does not overlap with other time slots belonging to `schedule_id` (e.g. this lets you manually override the default `duration` for instances of slots)
+`end_time` | Date | End time | No | `start_time` plus `schedule_id`'s `duration` value in minutes | Any valid date that is at least `start_time` plus `schedule_id`'s `duration` long and does not overlap with other time slots belonging to `schedule_id`.
 `schedule_id` | String | Schedule ID | Yes | None | Any valid schedule ID
 `created` | Date | Created | No | Auto | N/A
 `updated` | Date | Updated | No | Auto | N/A
