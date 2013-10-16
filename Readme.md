@@ -22,8 +22,8 @@ All resources support standard CRUD routes.
 
 ### Schedule
 
-Parameter | Type | Description | Required | Default Value | Possible Values
---- | --- | --- | --- | --- | ---
+Parameter | Type | Description | Required | Default | Possible Values | Premium Only
+--- | --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `date` | Date | Date | Yes | None | Future dates
 `start_time` | Date | Start Time | Yes | None | Future dates
@@ -38,16 +38,16 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 `confirm_slots` | Boolean | Confirm slots before accepting to schedule. | No | `false` | `true` or `false`
 `email_notifications` | Boolean | Send email notifications | No | `true` | `true` or `false`
 `email_reminders` | Boolean | Send email reminders | No | `true` | `true` or `false`
-`sms_notifications` | Boolean | Send SMS notifications | No | `true` | `true` or `false`
-`sms_reminders` | Boolean | Send SMS reminders | No | `true` | `true` or `false`
-`vcf` | Boolean | Send vCards (.vcf) files with emails and SMS messages | No | `true` | `true` or `false`
-`cal` | Boolean | Send calendar events (.cal) files with emails and SMS messages | No | `true` | `true` or `false`
+`sms_notifications` | Boolean | Send SMS notifications | No | `true` | `true` or `false` | :white_check_mark:
+`sms_reminders` | Boolean | Send SMS reminders | No | `true` | `true` or `false` | :white_check_mark:
+`vcf` | Boolean | Send vCards (.vcf) files with emails and SMS messages | No | `true` | `true` or `false` | :white_check_mark:
+`cal` | Boolean | Send calendar events (.cal) files with emails and SMS messages | No | `true` | `true` or `false` | :white_check_mark:
 `created` | Date | Created | No | Auto | N/A
 `updated` | Date | Updated | No | Auto | N/A
 
 ### Slots
 
-Parameter | Type | Description | Required | Default Value | Possible Values
+Parameter | Type | Description | Required | Default | Possible Values
 --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `schedule_id` | String | Schedule ID | Yes | None | Any valid schedule ID
