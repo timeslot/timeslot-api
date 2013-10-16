@@ -47,6 +47,7 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 `name` | String | Name | Yes | None | 20 characters
 `surname` | String | Surname | Yes | None | 20 characters
 `phone` | String | Phone Number | Yes | None | Any valid [E164][e164] phone number (e.g. `+16506918337` for US phone number)
+`comments` | String | Comments | No | None | 140 characters
 `start_time` | Date | Start time | Yes | None | Any valid time between `start_time` plus the `duration` of `schedule_id` OR any valid time between `start_time` and `end_time` that does not overlap with other time slots belonging to `schedule_id` (e.g. this lets you manually override the default `duration` for instances of slots)
 `end_time` | Date | End time | No | `start_time` plus `schedule_id`'s `duration` value in minutes | Any valid date that is at least `start_time` plus `schedule_id`'s `duration` long and does not overlap with other time slots belonging to `schedule_id`.
 `schedule_id` | String | Schedule ID | Yes | None | Any valid schedule ID
