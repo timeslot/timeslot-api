@@ -22,19 +22,19 @@ All resources support standard CRUD routes.
 
 ### Schedule
 
-Parameter | Type | Description | Required | Default | Possible Values | Premium Only
+Param | Type | Desc | Required | Default | Values | Premium
 --- | --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `date` | Date | Date | Yes | None | Future dates
 `start_time` | Date | Start Time | Yes | None | Future dates
 `end_time` | Date | End Time | Yes | None | Future dates
 `duration` | Integer | Duration | Yes | None | Any integer in minutes >= 15
-`location` | String | Location | No, but yes if `format` is equal to `in-person` | Any valid address, as searchable by Google Maps (e.g. 123 Street, City, State, ZIP).
+`location` | String | Location | If `format` is equal to `in-person` | None | Any valid address, as searchable by Google Maps (e.g. 123 Street, City, State, ZIP).
 `repeat` | String | Repeat | No | `once` | `once`, `weekly`, `daily`
 `title` | String | Title | No | None | 40 characters
 `desc` | String | Description | No | None | 140 characters
 `format` | String | Format | No | `in-person` | `in-person`, `skype`, `google-hangout`, `phone`
-`cost` | Integer | Cost | No | `0` | Any USD value >= $1.00 in cents, e.g. `100` = $1.00.
+`cost` | Integer | Cost | No | `0` | USD >= $1.00 in cents, e.g. `100` = $1.00
 `confirm_slots` | Boolean | Confirm slots before accepting to schedule. | No | `false` | `true` or `false`
 `email_notifications` | Boolean | Send email notifications | No | `true` | `true` or `false`
 `email_reminders` | Boolean | Send email reminders | No | `true` | `true` or `false`
@@ -47,7 +47,7 @@ Parameter | Type | Description | Required | Default | Possible Values | Premium 
 
 ### Slots
 
-Parameter | Type | Description | Required | Default | Possible Values
+Param | Type | Desc | Required | Default | Values
 --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `schedule_id` | String | Schedule ID | Yes | None | Any valid schedule ID
