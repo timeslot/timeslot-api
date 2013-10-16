@@ -29,6 +29,7 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 `start_time` | Date | Start Time | Yes | None | Future dates
 `end_time` | Date | End Time | Yes | None | Future dates
 `duration` | Integer | Duration | Yes | None | Any integer in minutes >= 15
+`location` | String | Location | No, but yes if `format` is equal to `in-person` | Any valid address, as searchable by Google Maps (e.g. 123 Street, City, State, ZIP).
 `repeat` | String | Repeat | No | `once` | `once`, `weekly`, `daily`
 `title` | String | Title | No | None | 40 characters
 `desc` | String | Description | No | None | 140 characters
@@ -43,10 +44,13 @@ Parameter | Type | Description | Required | Default Value | Possible Values
 --- | --- | --- | --- | --- | ---
 `id` | String | ID | No | Auto | N/A
 `email` | Email | Email | Yes | None | Any valid email address
-`name` | String | Name | No | None | 20 characters
-`surname` | String | Surname | No | None | 20 characters
+`name` | String | Name | Yes | None | 20 characters
+`surname` | String | Surname | Yes | None | 20 characters
+`phone` | String | Phone Number | Yes | None | Any valid [E164][e164] phone number (e.g. `+16506918337` for US phone number)
 `start_time` | Date | Start time | Yes | None | Any valid time between `start_time` plus the `duration` of `schedule_id` OR any valid time between `start_time` and `end_time` that does not overlap with other time slots belonging to `schedule_id` (e.g. this lets you manually override the default `duration` for instances of slots)
 `end_time` | Date | End time | No | `start_time` plus `schedule_id`'s `duration` value in minutes | Any valid date that is at least `start_time` plus `schedule_id`'s `duration` long and does not overlap with other time slots belonging to `schedule_id`.
 `schedule_id` | String | Schedule ID | Yes | None | Any valid schedule ID
 `created` | Date | Created | No | Auto | N/A
 `updated` | Date | Updated | No | Auto | N/A
+
+[e164]: http://en.wikipedia.org/wiki/E.164
